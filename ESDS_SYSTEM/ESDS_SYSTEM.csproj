@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FD9F37E3-9DC1-4731-9298-ED30276E40ED}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ESDS_SYSTEM</RootNamespace>
+    <AssemblyName>ESDS_SYSTEM</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXmlSDK.2.0\lib\Net35\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SpreadsheetLight, Version=3.4.11.0, Culture=neutral, PublicKeyToken=32fbb46dc1730c57, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpreadsheetLight.3.4.11\lib\net40\SpreadsheetLight.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.5.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administradores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administradores.Designer.cs">
+      <DependentUpon>Administradores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumnos.Designer.cs">
+      <DependentUpon>Alumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumnos_m.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumnos_m.Designer.cs">
+      <DependentUpon>Alumnos_m.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Conection.cs" />
+    <Compile Include="Control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control.Designer.cs">
+      <DependentUpon>Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control_m.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control_m.Designer.cs">
+      <DependentUpon>Control_m.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Creditos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Creditos.Designer.cs">
+      <DependentUpon>Creditos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datos.cs" />
+    <Compile Include="Exportar.cs" />
+    <Compile Include="Grados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grados.Designer.cs">
+      <DependentUpon>Grados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login2.Designer.cs">
+      <DependentUpon>Login2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maestros.Designer.cs">
+      <DependentUpon>Maestros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Admin.Designer.cs">
+      <DependentUpon>Menu_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_maestros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_maestros.Designer.cs">
+      <DependentUpon>Menu_maestros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validar.cs" />
+    <Compile Include="Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Administradores.resx">
+      <DependentUpon>Administradores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumnos.resx">
+      <DependentUpon>Alumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumnos_m.resx">
+      <DependentUpon>Alumnos_m.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control.resx">
+      <DependentUpon>Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control_m.resx">
+      <DependentUpon>Control_m.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Creditos.resx">
+      <DependentUpon>Creditos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grados.resx">
+      <DependentUpon>Grados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login2.resx">
+      <DependentUpon>Login2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maestros.resx">
+      <DependentUpon>Maestros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Admin.resx">
+      <DependentUpon>Menu_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_maestros.resx">
+      <DependentUpon>Menu_maestros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
